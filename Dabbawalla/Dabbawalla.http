@@ -1,0 +1,6 @@
+@Dabbawalla_HostAddress = http://localhost:5263
+
+GET {{Dabbawalla_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
