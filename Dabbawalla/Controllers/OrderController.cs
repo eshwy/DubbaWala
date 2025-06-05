@@ -22,8 +22,6 @@ namespace Dabbawalla.Controllers
         [HttpGet("OrderPlacingAndAddressDetails")]
         public IActionResult OrderPlacingAndAddressDetails([FromQuery] int foodId, [FromQuery] string? userLogedIn)
         {
-            userLogedIn = "a6f53951-087f-11f0-b76b-ee479181cceb";
-
             var foodDetails = _context.FoodItems.Where(x => x.Id == foodId).FirstOrDefault();
 
             var addressDetails = _context.Addresses.Where(x => x.UserId.ToString() == userLogedIn.ToString()).ToList();
